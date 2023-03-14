@@ -11,13 +11,13 @@ const contacts = require("./contacts");
       method: 'POST',
       path: '/contacts',
       handler: (request, h) => {
-        const { nama, email, nim } = request.payload;
+        const { nama, email, phone } = request.payload;
         const id = contacts[contacts.length - 1].id + 1;
         contacts.push({
           id,
           nama,
           email,
-          nim
+          phone
         });
         const response = h.response({ message: 'Kontak berhasil ditambahkan' });
         response.code(201);
