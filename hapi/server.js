@@ -14,6 +14,7 @@ server.route({
     const contact = request.payload;
     contacts.push(contact);
     return h.response(contact).code(201);
+    const response = h.response({ message: 'Kontak berhasil ditambahkan' });
   },
 });
 
@@ -33,6 +34,7 @@ server.route({
     const index = contacts.findIndex(c => c.id === id);
     if (index !== -1) {
       contacts.splice(index, 1);
+      const response = h.response({ message: 'Kontak tidak ditemukan' });
     }
     return h.response().code(200);
   },
