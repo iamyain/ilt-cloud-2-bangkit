@@ -21,7 +21,7 @@ User data structure:
 }
 ```
 Server options:
- - `port`: 3000
+ - `port`: 8080
  - `host`: localhost
 
 
